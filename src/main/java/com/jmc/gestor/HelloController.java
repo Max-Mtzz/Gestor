@@ -14,4 +14,13 @@ public class HelloController {
     @FXML private TableColumn<Tarea, String> colDescripcion;
     @FXML private TableColumn<Tarea, String> colPrioridad;
     @FXML private TableColumn<Tarea, LocalDate> colFechaLimite;
+
+    @FXML private TextField txtId;
+    @FXML private TextField txtTitulo;
+    @FXML private TextArea txtDescripcion;
+    @FXML private ComboBox<String> cmbPrioridad;
+    @FXML private DatePicker dateFechaLimite;
+
+    private final ObservableList<Tarea> listaTareas = FXCollections.observableArrayList();
+
 }
