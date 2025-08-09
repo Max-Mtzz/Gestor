@@ -96,5 +96,15 @@ public class HelloController {
         }
     }
 
+    @FXML
+    private void eliminarTarea() {
+        Tarea seleccionada = tablaTareas.getSelectionModel().getSelectedItem();
+        if (seleccionada != null) {
+            listaTareas.remove(seleccionada);
+            limpiarCampos();
+        } else {
+            mostrarAlerta("Advertencia", "Seleccione una tarea para eliminar", Alert.AlertType.WARNING);
+        }
+    }
 
 }
