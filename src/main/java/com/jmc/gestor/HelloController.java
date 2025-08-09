@@ -64,6 +64,20 @@ public class HelloController {
         alerta.showAndWait();
     }
 
+    @FXML
+    private void agregarTarea() {
+        try {
+            int id = Integer.parseInt(txtId.getText());
+            String titulo = txtTitulo.getText();
+            String descripcion = txtDescripcion.getText();
+            String prioridad = cmbPrioridad.getValue();
+            LocalDate fecha = dateFechaLimite.getValue();
 
+            listaTareas.add(new Tarea(id, titulo, descripcion, prioridad, fecha));
+            limpiarCampos();
+        } catch (Exception e) {
+            mostrarAlerta("Error", "Datos inválidos", Alert.AlertType.ERROR);
+        }
+    }
 
 }
