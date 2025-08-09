@@ -1,0 +1,87 @@
+.root {
+    -fx-background-color: #f4f6f8;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #d0d0d0;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #3498db;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 35px;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #ddd;
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.text-field, .text-area, .combo-box, .date-picker {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #ccc;
+    -fx-padding: 5;
+}
+
+.text-area {
+    -fx-control-inner-background: white;
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.button-agregar {
+    -fx-background-color: #27ae60;
+}
+.button-agregar:hover {
+    -fx-background-color: #219150;
+}
+.button-agregar:pressed {
+    -fx-background-color: #1b7741;
+}
+
+.button-editar {
+    -fx-background-color: #e67e22;
+}
+.button-editar:hover {
+    -fx-background-color: #cf6d1c;
+}
+.button-editar:pressed {
+    -fx-background-color: #a65415;
+}
+
+.button-eliminar {
+    -fx-background-color: #c0392b;
+}
+.button-eliminar:hover {
+    -fx-background-color: #a93226;
+}
+.button-eliminar:pressed {
+    -fx-background-color: #8b241f;
+}
+
+.button-limpiar {
+    -fx-background-color: #7f8c8d;
+}
+.button-limpiar:hover {
+    -fx-background-color: #707b7c;
+}
+.button-limpiar:pressed {
+    -fx-background-color: #5a6465;
+}
