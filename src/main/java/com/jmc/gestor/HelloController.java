@@ -46,4 +46,24 @@ public class HelloController {
         });
     }
 
+    @FXML
+    private void limpiarCampos() {
+        txtId.clear();
+        txtTitulo.clear();
+        txtDescripcion.clear();
+        cmbPrioridad.setValue(null);
+        dateFechaLimite.setValue(null);
+        tablaTareas.getSelectionModel().clearSelection();
+    }
+
+    private void mostrarAlerta(String titulo, String mensaje, Alert.AlertType tipo) {
+        Alert alerta = new Alert(tipo);
+        alerta.setTitle(titulo);
+        alerta.setHeaderText(null);
+        alerta.setContentText(mensaje);
+        alerta.showAndWait();
+    }
+
+
+
 }
