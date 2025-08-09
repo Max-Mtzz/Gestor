@@ -23,4 +23,27 @@ public class HelloController {
 
     private final ObservableList<Tarea> listaTareas = FXCollections.observableArrayList();
 
+    @FXML
+    public void initialize() {
+        colId.setCellValueFactory(data -> new javafx.beans.property.SimpleIntegerProperty(data.getValue().getId()).asObject());
+        colTitulo.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().getTitulo()));
+        colDescripcion.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().getDescripcion()));
+        colPrioridad.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().getPrioridad()));
+        colFechaLimite.setCellValueFactory(data -> new javafx.beans.property.SimpleObjectProperty<>(data.getValue().getFechaLimite()));
+
+        cmbPrioridad.getItems().addAll("Alta", "Media", "Baja");
+
+        tablaTareas.setItems(listaTareas);
+
+        tablaTareas.getSelectionModel().selectedItemProperty().addListener((obs, oldSel, newSel) -> {
+            if (newSel != null) {
+                txtId.setText(String.valueOf(newSel.getId()));
+                txtTitulo.setText(newSel.getTitulo());
+                txtDescripcion.setText(newSel.getDescripcion());
+                cmbPrioridad.setValue(newSel.getPrioridad());
+                dateFechaLimite.setValue(newSel.getFechaLimite());
+            }
+        });
+    }
+
 }
