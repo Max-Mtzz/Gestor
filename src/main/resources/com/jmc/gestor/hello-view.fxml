@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<BorderPane prefHeight="792.0" prefWidth="762.0" stylesheets="@../../../Styles/Stylee.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jmc.gestor.HelloController">
+<BorderPane prefHeight="792.0" prefWidth="762.0" stylesheets="@../../../Styles/Stylee.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jmc.gestor.HelloController">
     <center>
         <TableView fx:id="tablaTareas">
             <columns>
@@ -59,10 +47,10 @@
             </GridPane>
 
             <HBox prefHeight="42.0" prefWidth="762.0" spacing="10">
-                <Button styleClass="button-agregar" text="Agregar" />
-                <Button styleClass="button-editar" text="Editar" />
-                <Button styleClass="button-eliminar" text="Eliminar" />
-                <Button styleClass="button-limpiar" text="Limpiar" />
+                <Button onAction="#agregarTarea" styleClass="button-agregar" text="Agregar" />
+                <Button onAction="#editarTarea" styleClass="button-editar" text="Editar" />
+                <Button onAction="#eliminarTarea" styleClass="button-eliminar" text="Eliminar" />
+                <Button onAction="#limpiarCampos" styleClass="button-limpiar" text="Limpiar" />
             </HBox>
         </VBox>
     </bottom>
