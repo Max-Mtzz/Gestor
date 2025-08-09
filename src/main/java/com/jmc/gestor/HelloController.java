@@ -80,4 +80,21 @@ public class HelloController {
         }
     }
 
+    @FXML
+    private void editarTarea() {
+        Tarea seleccionada = tablaTareas.getSelectionModel().getSelectedItem();
+        if (seleccionada != null) {
+            seleccionada.setId(Integer.parseInt(txtId.getText()));
+            seleccionada.setTitulo(txtTitulo.getText());
+            seleccionada.setDescripcion(txtDescripcion.getText());
+            seleccionada.setPrioridad(cmbPrioridad.getValue());
+            seleccionada.setFechaLimite(dateFechaLimite.getValue());
+            tablaTareas.refresh();
+            limpiarCampos();
+        } else {
+            mostrarAlerta("Advertencia", "Seleccione una tarea para editar", Alert.AlertType.WARNING);
+        }
+    }
+
+
 }
